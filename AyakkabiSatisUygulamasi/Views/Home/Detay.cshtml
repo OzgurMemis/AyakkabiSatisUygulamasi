@@ -1,0 +1,145 @@
+﻿@model AyakkabiSatisUygulamasi.Models.Products
+@{
+    ViewData["Title"] = "Detay";
+    Layout = "~/Views/Shared/_HomeLayout.cshtml";
+}
+
+
+<!-- Page Header Start -->
+<div class="container-fluid bg-light mb-5">
+    <div class="d-flex flex-column align-items-center justify-content-center" style="min-height: 300px">
+        <h1 class="font-weight-semi-bold text-uppercase mb-3">Ürün Detayları</h1>
+        <div class="d-inline-flex">
+            <p class="m-0"><a href="index.html">Ana Sayfa</a></p>
+            <p class="m-0 px-2">-</p>
+            <p class="m-0">Ürün Detayları</p>
+        </div>
+    </div>
+</div>
+<!-- Page Header End -->
+<!-- Shop Detail Start -->
+<div class="container-fluid py-5">
+    <div class="row px-xl-5">
+        <div class="col-lg-5 pb-5">
+            <div id="product-carousel" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner border">
+                    <div class="carousel-item active">
+                        <img class="w-100 h-100" src="/Urunler/@Model.ProductPicture" alt="Image">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="w-100 h-100" src="/Urunler/@Model.ProductPicture" alt="Image">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="w-100 h-100" src="/Urunler/@Model.ProductPicture" alt="Image">
+                    </div>
+                    <!--
+                    <div class="carousel-item">
+                        <img class="w-100 h-100" src="img/product-4.jpg" alt="Image">
+                    </div>
+                    -->
+                </div>
+                <a class="carousel-control-prev" href="#product-carousel" data-slide="prev">
+                    <i class="fa fa-2x fa-angle-left text-dark"></i>
+                </a>
+                <a class="carousel-control-next" href="#product-carousel" data-slide="next">
+                    <i class="fa fa-2x fa-angle-right text-dark"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="col-lg-7 pb-5">
+            <h3 class="font-weight-semi-bold">@Model.ProductName</h3>
+            <div class="d-flex mb-3">
+                <div class="text-primary mb-2">
+                    <small class="fas fa-star"></small>
+                    <small class="fas fa-star"></small>
+                    <small class="fas fa-star"></small>
+                    <small class="fas fa-star-half-alt"></small>
+                    <small class="far fa-star"></small>
+                </div>
+                <small class="pt-1">(50 Değerlendirme)</small>
+            </div>
+            <h3 class="font-weight-semi-bold mb-4">@Model.ProductPrice</h3>
+            <p class="mb-4">@Model.ProductDescription</p>
+           <!-- renk ve numara ekleyebilirsin-->
+            <div class="d-flex align-items-center mb-4 pt-2">
+                
+                <button class="btn btn-primary px-3">
+                    <a href="/Cart/Index" style="color: black">
+                    <i class="fa fa-shopping-cart mr-1"></i>Sepet Listesini Gör</button>
+                    </a>
+            </div>
+            <div class="d-flex pt-2">
+                <p class="text-dark font-weight-medium mb-0 mr-2">Paylaş:</p>
+                <div class="d-inline-flex">
+                    <a class="text-dark px-2" href="#">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a class="text-dark px-2" href="#">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row px-xl-5">
+        <div class="col">
+            <div class="nav nav-tabs justify-content-center border-secondary mb-4">
+                <a class="nav-item nav-link active" data-toggle="tab" href="#tab-pane-1">Açıklama</a>
+                <a class="nav-item nav-link" data-toggle="tab" href="#tab-pane-2">Ürün Bilgileri</a>
+               
+            </div>
+            <div class="tab-content">
+                <div class="tab-pane fade show active" id="tab-pane-1">
+                    <h4 class="mb-3">Ürün Açıklaması</h4>
+                    <p>@Model.ProductDescription</p>
+
+                </div>
+                <div class="tab-pane fade" id="tab-pane-2">
+                    <h4 class="mb-3">Bilgi</h4>
+                    <p>
+                        True Sneakers, müşteri memnuniyetine büyük önem veren bir markadır. Satış öncesi ve satış sonrası destek ekibi, her türlü soru ve sorunu çözmek için müşterilere yardımcı olmaktadır. Ayrıca, firma, trendleri yakından takip ederek koleksiyonlarını düzenli olarak güncellemekte ve yeni ürünleri piyasaya sunmaktadır. True Sneakers, sadece ürünlerinin kalitesine değil, aynı zamanda sosyal sorumluluk projelerine de önem vermektedir. Çevre dostu malzemelerin kullanılmasına özen göstererek doğaya olan saygısını göstermektedir ve sosyal yardım projelerine katkıda bulunarak topluma fayda sağlamayı amaçlamaktadır. Sonuç olarak, True Sneakers, Bayan Ayakkabı Satışı ve Erkek Ayakkabı Satışı konularında güvenilir bir marka olarak öne çıkmaktadır.
+                    </p>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item px-0">
+                                    TrueSneakers Tam Sana göre
+                                </li>
+                                <li class="list-group-item px-0">
+                                    TrueSneakers Tam Sana göre
+                                </li>
+                                <li class="list-group-item px-0">
+                                    TrueSneakers Tam Sana göre
+                                </li>
+                                <li class="list-group-item px-0">
+                                    TrueSneakers Tam Sana göre
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item px-0">
+                                    Nike Tam Sana göre
+                                </li>
+                                <li class="list-group-item px-0">
+                                    Nike Tam Sana göre.
+                                </li>
+                                <li class="list-group-item px-0">
+                                    Nike Tam Sana göre
+                                </li>
+                                <li class="list-group-item px-0">
+                                    Nike Tam Sana göre.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+               
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Shop Detail End -->
+
+

@@ -1,0 +1,37 @@
+﻿@model AyakkabiSatisUygulamasi.Dto.AppUserEditDto
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_HomeLayout.cshtml";
+}
+
+<h1 style="text-align: center;">Profili Güncelle</h1>
+
+<div class="row" style="display: flex;
+        justify-content: center;
+        align-items: center;">
+    <div class="col-md-8">
+        <form method="post" asp-controller="MyAccount">
+            <div class="form-group">
+                <input asp-for="FirstName" placeholder="Adınızı Giriniz" class="form-control"/>
+            </div>
+            <div class="form-group">
+                <input asp-for="LastName" placeholder="Soyadınızı Giriniz" class="form-control"/>
+            </div>
+            <div class="form-group">
+                <input asp-for="Email" placeholder="E-Posta Adresinizi Giriniz" class="form-control" />
+            </div>
+            <div class="form-group">
+                <input asp-for="City" placeholder="Şehir Giriniz" class="form-control" />
+            </div>
+            <div class="form-group">
+                <input asp-for="Password" placeholder="Şifrenizi Giriniz" class="form-control" />
+            </div>
+            <div class="form-group">
+                <input asp-for="ConfirmPassword" placeholder="Şifrenizi Tekrar Giriniz" class="form-control" />
+            </div>
+            <div class="form-group" style="text-align: center;">
+                <input type="submit" value="Düzenle" class="btn btn-primary btn-lg" />
+            </div>
+        </form>
+    </div>
+</div>

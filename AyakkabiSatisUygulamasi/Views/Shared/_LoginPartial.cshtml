@@ -1,0 +1,34 @@
+﻿@using Microsoft.AspNetCore.Identity
+@inject SignInManager<AppUser> SignInManager
+@inject UserManager<AppUser> UserManager
+
+@if (SignInManager.IsSignedIn(User))
+{
+    <div class="menü-item-3">
+        <a href="/MyAccount/Index" style="color: black">
+            <i class="fas fa-user"></i>
+            <span>@User.Identity.Name</span>
+        </a>
+    </div>
+    <div class="menü-item-4">
+        <a href="/Logout/Index" style="color: black">
+            <i class="fas fa-sign-out-alt"></i>
+            <span>Çıkış Yap</span>
+        </a>
+    </div>
+}
+else
+{
+    <div class="menü-item-3">
+        <a href="/Login/Index" style="color: black">
+            <i class="fas fa-user"></i>
+            <span>Giriş Yap</span>
+        </a>
+    </div>
+    <div class="menü-item-4">
+        <a href="/Register/Index" style="color: black">
+        <i class="fas fa-address-card"></i>
+            <span>Hesap Oluştur</span>
+        </a>
+    </div>
+}
